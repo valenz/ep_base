@@ -1,5 +1,7 @@
 exports.documentReady = function(hooks, context, cb) {
+    console.log('before'+context);
     if(context != 'admin/managepads') return cb;
+    console.log('after'+context);
     
     var socket,
     loc = document.location,
