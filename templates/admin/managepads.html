@@ -6,7 +6,9 @@
         
         <% e.begin_block("scripts"); %>
         <script src="../static/js/jquery.js"></script>
-        <% e.end_block(); %>
+        <script src="../socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="../static/js/require-kernel.js"></script>
+        <script type="text/javascript" src="../socket.io/socket.io.js"></script>
         
         <script type="text/javascript">
             var clientVars = {};
@@ -18,6 +20,16 @@
                 var plugins = require('ep_etherpad-lite/static/js/pluginfw/client_plugins');
                 var hooks = require('ep_etherpad-lite/static/js/pluginfw/hooks');
                 
+                require.setRootURI(baseURL + "javascripts/src");
+                require.setLibraryURI(baseURL + "javascripts/lib");
+                require.setGlobalKeyPath("require");
+        
+                $ = jQuery = require('ep_etherpad-lite/static/js/rjquery').jQuery; // Expose jQuery #HACK
+        
+                if ((!$.browser.msie) && (!($.browser.mozilla && $.browser.version.indexOf("1.8.") == 0))) {
+                    document.domain = document.domain; // for comet
+                }
+                
                 plugins.baseURL = baseURL;
                 plugins.update(function() {
                     hooks.plugins = plugins;
@@ -28,6 +40,7 @@
                 });
             }());
         </script>
+        <% e.end_block(); %>
     </head>
     <body>
         <div id="wrapper">
