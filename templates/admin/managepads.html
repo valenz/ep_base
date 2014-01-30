@@ -17,10 +17,7 @@
                 
                 var baseURL = pathComponents.slice(0, pathComponents.length-2).join('/') + '/';
                 
-                var plugins = require('ep_etherpad-lite/static/js/pluginfw/client_plugins');
-                var hooks = require('ep_etherpad-lite/static/js/pluginfw/hooks');
-                
-                /*require.setRootURI(baseURL + "javascripts/src");
+                require.setRootURI(baseURL + "javascripts/src");
                 require.setLibraryURI(baseURL + "javascripts/lib");
                 require.setGlobalKeyPath("require");
         
@@ -28,7 +25,10 @@
         
                 if ((!$.browser.msie) && (!($.browser.mozilla && $.browser.version.indexOf("1.8.") == 0))) {
                     document.domain = document.domain; // for comet
-                }*/
+                }
+                
+                var plugins = require('ep_etherpad-lite/static/js/pluginfw/client_plugins');
+                var hooks = require('ep_etherpad-lite/static/js/pluginfw/hooks');
                 
                 plugins.baseURL = baseURL;
                 plugins.update(function() {

@@ -17,6 +17,6 @@ exports.eejsBlock_adminMenu = function (hook_name, args, cb) {
     , urlPrefix = hasAdminUrlPrefix ? "admin/" : hasTwoDirDown ? "../../" : hasOneDirDown ? "../" : ""
     ;
     
-    args.content = args.content + '<li><a href="'+ urlPrefix +'pads">Pad administration</a> </li>';
+    args.content = args.content + '<li><a href="'+ urlPrefix +'managepads">Pad administration</a> </li>';
     return cb();
 };
