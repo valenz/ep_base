@@ -3,7 +3,11 @@
         {
             "name": "ep_managepads",
             "hooks": {
-                "expressCreateServer" : "ep_managepads/index:expressCreateServer"
+                "expressCreateServer" : "ep_managepads/index:registerRoute",
+                "eejsBlock_adminMenu" : "ep_managepads/index"
+            },
+            "client_hooks" : {
+                "documentReady" : "ep_managepads/static/js/admin/managepads"
             }
         }
     ]
