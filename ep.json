@@ -1,12 +1,12 @@
 {
     "parts": [
         {
-            "name": "PLUGINNAME",
+            "name": "ep_managepads",
             "hooks": {
-                "HOOKNAME" : "ep_FOLDERNAME/index:FUNCTIONNAME1"
-            },
-            "client_hooks": {
-                "CLIENT_HOOKNAME" : "ep_FOLDERNAME/static/js/index:FUNCTIONNAME1"
+                "expressCreateServer" : "ep_managepads/index:expressCreateServer"
+            //},
+            //"client_hooks": {
+                //"CLIENT_HOOKNAME" : "ep_FOLDERNAME/static/js/index:FUNCTIONNAME1"
             }
         }
     ]
