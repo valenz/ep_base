@@ -4,9 +4,6 @@
             "name": "ep_managepads",
             "hooks": {
                 "expressCreateServer" : "ep_managepads/index:expressCreateServer"
-            //},
-            //"client_hooks": {
-                //"CLIENT_HOOKNAME" : "ep_FOLDERNAME/static/js/index:FUNCTIONNAME1"
             }
         }
     ]

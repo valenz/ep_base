@@ -8,6 +8,5 @@
 	},
 	"author": "valenz (Stephan Wegner) <stephan.wegner@mail.de>",
 	"contributors": [],
-	"dependencies": {"MODULE": "0.3.20"},
 	"engines": { "node": ">= 0.6.0"}
 }
