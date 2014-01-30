@@ -17,12 +17,6 @@ exports.eejsBlock_adminMenu = function (hook_name, args, cb) {
     , urlPrefix = hasAdminUrlPrefix ? "admin/" : hasTwoDirDown ? "../../" : hasOneDirDown ? "../" : ""
     ;
     
-    args.content = args.content + '<li><a href="'+ urlPrefix +'pads">Manage pads</a> </li>';
+    args.content = args.content + '<li><a href="'+ urlPrefix +'pads">Pad administration</a> </li>';
     return cb();
 };
-
-/*exports.expressCreateServer = function(hook_name, args, cb) {
-    args.app.get('/apples', function(req, res) {
-        res.send("<em>Abra Cadabra!</em>");
-    });
-}*/
