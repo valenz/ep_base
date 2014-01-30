@@ -1,4 +1,4 @@
-/*exports.documentReady = function(hooks, context, cb) {
+exports.documentReady = function(hooks, context, cb) {
     if(context != 'admin/managepads') return cb;
     
     var socket,
@@ -12,4 +12,4 @@
     
     //connect
     socket = io.connect(url, {resource : resource}).of("/pluginfw/admin/managepads");
-}*/
+}
