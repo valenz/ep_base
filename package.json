@@ -1,8 +1,12 @@
 {
-	"name": "ep_PLUGINNAME",
+	"name": "ep_managepads",
 	"version": "0.0.1",
-	"description": "DESCRIPTION",
-	"author": "USERNAME (REAL NAME) <MAIL@EXAMPLE.COM>",
+	"description": "manage pads",
+	"repository": {
+	    "type": "git",
+	    "url": "https://github.com/valenz/ep_managepads.git"
+	},
+	"author": "valenz (Stephan Wegner) <stephan.wegner@mail.de>",
 	"contributors": [],
 	"dependencies": {"MODULE": "0.3.20"},
 	"engines": { "node": ">= 0.6.0"}
