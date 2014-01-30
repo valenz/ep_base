@@ -1,7 +1,5 @@
-exports.documentReady = function(hooks, context, cb) {
-    console.log('before'+context);
+/*exports.documentReady = function(hooks, context, cb) {
     if(context != 'admin/managepads') return cb;
-    console.log('after'+context);
     
     var socket,
     loc = document.location,
@@ -14,4 +12,4 @@ exports.documentReady = function(hooks, context, cb) {
     
     //connect
     socket = io.connect(url, {resource : resource}).of("/pluginfw/admin/managepads");
-}
+}*/

@@ -1,13 +1,13 @@
 var eejs = require('ep_etherpad-lite/node/eejs');
 
 exports.registerRoute = function (hook_name, args, cb) {
-  args.app.get('/admin/managepads', function(req, res) {
+    args.app.get('/admin/managepads', function(req, res) {
     
-    var render_args = {
-      errors: []
-    };
-    res.send( eejs.require("ep_managepads/templates/admin/managepads.html", render_args) );
-  });
+        var render_args = {
+            errors: []
+        };
+        res.send( eejs.require("ep_managepads/templates/admin/managepads.html", render_args) );
+    });
 };
 
 exports.eejsBlock_adminMenu = function (hook_name, args, cb) {
